@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
-import ThemeProvider from "@/src/components/ThemeProvider";
-import Header from "@/src/components/Header";
-import Footer from "@/src/components/Footer";
-import ScrollToTop from "@/src/components/ScrollToTop";
+import ThemeProvider from "../src/components/ThemeProvider";
+import Header from "../src/components/Header";
+import Footer from "../src/components/Footer";
+import ScrollToTop from "../src/components/ScrollToTop";
 
 const inter = Inter({
   variable: "--font-geist-sans",
