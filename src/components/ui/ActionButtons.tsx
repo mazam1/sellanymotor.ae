@@ -21,7 +21,7 @@ export function ActionButtons({
     <div className={`flex flex-col sm:flex-row gap-5 ${className}`}>
       <Link
         href={whatsappUrl}
-        className="inline-flex items-center justify-center h-12 min-h-[48px] px-6 sm:px-8 py-3 bg-[#FFA800] hover:bg-[#E69500] text-white font-semibold tracking-[0.2px] text-base sm:text-lg rounded-xl transition-all duration-200 active:scale-95"
+        className="inline-flex items-center justify-center h-12 min-h-[48px] px-6 sm:px-8 py-3 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold tracking-[0.2px] text-base sm:text-lg rounded-md transition-all duration-200 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
         aria-label="Open WhatsApp chat with customer support"
         target="_blank"
         rel="noopener noreferrer"
@@ -43,7 +43,7 @@ export function ActionButtons({
       </Link>
       <Link
         href={phoneUrl}
-        className="inline-flex items-center justify-center h-12 min-h-[48px] px-6 sm:px-8 py-3 bg-[rgba(255,255,255,0.10)] hover:bg-[rgba(255,255,255,0.15)] border border-[rgba(255,255,255,0.20)] text-white font-semibold tracking-[0.2px] text-base sm:text-lg rounded-xl transition-all duration-200 active:scale-95"
+        className="inline-flex items-center justify-center h-12 min-h-[48px] px-6 sm:px-8 py-3 bg-black text-white hover:bg-gray-800 font-semibold tracking-[0.2px] text-base sm:text-lg rounded-md transition-all duration-200 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
         aria-label="Call customer support directly"
       >
         <svg

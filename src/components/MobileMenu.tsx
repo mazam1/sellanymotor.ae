@@ -24,7 +24,7 @@ export default function MobileMenu({
         onClick={onClose}
       />
       {/* panel */}
-      <div className="relative h-full w-80 max-w-[85%] bg-white dark:bg-black shadow-lg">
+      <div className="relative h-full w-80 max-w-[85%] bg-white shadow-lg">
         {children}
       </div>
     </div>
