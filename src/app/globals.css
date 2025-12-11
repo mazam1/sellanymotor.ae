@@ -1,31 +1,53 @@
 @import "tailwindcss";
+@reference "tailwindcss/utilities";
+
+@theme {
+  --color-border: var(--border);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-brand-gold: var(--brand-gold);
+}
 
 @layer base {
   :root {
-    /* Black and White Theme - Light Mode */
-    --brand: #000000;
-    --secondary: #333333;
-    --accent: #666666;
-    --success: #1E9E6F;
-    --warning: #E08A00;
-    --danger: #C3402F;
-    
+    /* Brand Palette: Gold / Black / White */
+    --brand: #C49A36; /* Primary Gold */
+    --secondary: #000000; /* Black */
+    --accent: #FFFFFF; /* White */
+    --success: #2E7D32; /* Accessible green */
+    --warning: #D97706; /* Accessible orange */
+    --danger: #DC2626; /* Accessible red */
+
     /* Light Theme */
-    --bg: #FFFFFF;
+    --bg: #FFFFFF; /* White background */
     --surface: #FFFFFF;
-    --text-primary: #000000;
-    --text-secondary: #333333;
-    --muted: #666666;
-    
+    --text-primary: #000000; /* Black text */
+    --text-secondary: #111827; /* Near-black for secondary text */
+    --muted: #6B7280; /* Gray 500 for muted */
+
     /* Neutral Scale */
     --neutral-100: #FFFFFF;
-    --neutral-200: #EEEEEE;
-    --neutral-300: #CCCCCC;
-    --neutral-400: #999999;
-    --neutral-500: #666666;
-    --neutral-600: #333333;
-    --neutral-700: #000000;
-    
+    --neutral-200: #F4F4F5;
+    --neutral-300: #D9DEE3;
+    --neutral-400: #B7C0C8;
+    --neutral-500: #8A94A0;
+    --neutral-600: #5B6470;
+    --neutral-700: #2F3742;
+
     /* System Colors */
     --background: var(--bg);
     --foreground: var(--text-primary);
@@ -34,22 +56,23 @@
     --popover: var(--surface);
     --popover-foreground: var(--text-primary);
     --primary: var(--brand);
-    --primary-foreground: #FFFFFF;
+    /* Gold background requires dark text for WCAG AA */
+    --primary-foreground: #000000;
     --secondary: var(--secondary);
     --secondary-foreground: #FFFFFF;
     --muted: var(--neutral-200);
-    --muted-foreground: var(--neutral-500);
+    --muted-foreground: var(--neutral-600);
     --accent: var(--accent);
-    --accent-foreground: #FFFFFF;
+    --accent-foreground: #000000; /* Dark text on white accents */
     --destructive: var(--danger);
     --destructive-foreground: #FFFFFF;
-    --border: var(--neutral-200);
-    --input: var(--neutral-200);
-    --ring: var(--accent);
-    
+    --border: var(--neutral-300);
+    --input: var(--neutral-300);
+    --ring: var(--brand);
+
     /* Brand-specific */
-    --brand-gold: var(--accent);
-    
+    --brand-gold: var(--brand);
+
     /* Radius and Shadows */
     --radius: 0.75rem;
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
@@ -59,13 +82,13 @@
   }
 
   .dark {
-    /* Black and White Theme - Dark Mode */
+    /* Dark Mode aligned to Gold / Black / White */
     --bg: #000000;
-    --surface: #121212;
+    --surface: #0F0F0F;
     --text-primary: #FFFFFF;
-    --text-secondary: #CCCCCC;
-    --muted: #666666;
-    
+    --text-secondary: #D1D5DB;
+    --muted: #111111;
+
     /* System Colors - Dark Mode */
     --background: var(--bg);
     --foreground: var(--text-primary);
@@ -73,22 +96,41 @@
     --card-foreground: var(--text-primary);
     --popover: var(--surface);
     --popover-foreground: var(--text-primary);
-    --primary: var(--text-primary);
-    --primary-foreground: var(--brand);
+    --primary: var(--brand);
+    /* Maintain readable contrast on gold */
+    --primary-foreground: #000000;
     --secondary: var(--secondary);
-    --secondary-foreground: var(--text-primary);
-    --muted: var(--neutral-600);
-    --muted-foreground: var(--neutral-400);
+    --secondary-foreground: #FFFFFF;
+    --muted: #111111;
+    --muted-foreground: #D1D5DB;
     --accent: var(--accent);
-    --accent-foreground: var(--text-primary);
+    --accent-foreground: #000000;
     --destructive: var(--danger);
-    --destructive-foreground: var(--text-primary);
-    --border: var(--neutral-600);
-    --input: var(--neutral-600);
-    --ring: var(--accent);
+    --destructive-foreground: #FFFFFF;
+    --border: #333333;
+    --input: #333333;
+    --ring: var(--brand);
   }
 }
 
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded px-6 py-4 font-semibold transition-all duration-200 hover:brightness-95 focus-visible:outline-none focus-visible:ring-2;
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded px-6 py-4 font-semibold transition-all duration-200 hover:brightness-95 focus-visible:outline-none focus-visible:ring-2;
+    background-color: var(--secondary);
+    color: var(--secondary-foreground);
+  }
+  .btn-white {
+    @apply inline-flex items-center justify-center rounded px-6 py-4 font-semibold transition-all duration-200 hover:brightness-95 focus-visible:outline-none focus-visible:ring-2;
+    background-color: var(--accent);
+    color: var(--accent-foreground);
+    border: 1px solid var(--border);
+  }
+}
 /* Add smooth transitions for theme switching */
 .transition-ready * {
   transition: background-color 300ms ease-in-out, 
@@ -129,12 +171,12 @@
   
   /* Typography */
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: var(--font-display), system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-weight: 600;
   }
   
   body, p, span, div, button, input, select, textarea {
-    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: var(--font-body), system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   }
   
   h1 {
@@ -169,8 +211,53 @@
   html, body, * {
     transition: color 200ms ease, background-color 200ms ease, border-color 200ms ease, fill 200ms ease, stroke 200ms ease;
   }
+
+  /* Respect reduced motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
   
   /* Color scheme for form controls */
   html.light { color-scheme: light; }
   html.dark { color-scheme: dark; }
+}
+
+/* Base text theme */
+@layer base {
+  html, body {
+    @apply antialiased leading-relaxed;
+    color: var(--foreground);
+    background-color: var(--background);
+    font-family: var(--font-geist-sans), system-ui, sans-serif;
+    letter-spacing: 0.01em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--foreground);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  p {
+    color: var(--foreground);
+  }
+
+  small, figcaption {
+    color: var(--muted-foreground);
+  }
+
+  a {
+    color: var(--primary);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  hr {
+    border-color: var(--border);
+  }
 }

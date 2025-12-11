@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Car, Clock, DollarSign, CheckCircle } from "lucide-react";
+import { ArrowRight, Car, Clock, DollarSign, CheckCircle, MapPin, BadgeCheck, Wallet, Building2, Truck, Bike } from "lucide-react";
 import ParallaxParticles from "@/src/components/ParallaxParticles";
 
 export default function Home() {
@@ -190,216 +190,126 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-12 bg-white dark:bg-slate-900">
+      {/* Dubai RTA Transfer & Documentation */}
+      <section className="py-16 bg-white dark:bg-slate-900">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="bg-gray-100 dark:bg-slate-800 p-6 rounded-xl text-center">
-              <div className="flex justify-center mb-3">
-                <Car className="h-8 w-8 text-blue-600" />
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold">Dubai RTA Transfer & Documentation</h2>
+            <p className="mt-4 text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+              Seamless paperwork handled by our specialists. We coordinate with RTA and local banks so you
+              can complete the sale in minutes with full transparency and compliance.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-gray-100 dark:bg-slate-800 p-6 rounded-xl text-left">
+              <div className="flex items-center mb-3">
+                <BadgeCheck className="h-6 w-6 text-blue-600 mr-2" />
+                <h3 className="text-lg font-semibold">Instant RTA Transfer</h3>
               </div>
-              <div className="text-3xl font-bold">50K+</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Cars Purchased</div>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Title transfer, vehicle deregistration, and new ownership—all processed correctly at RTA Dubai.
+              </p>
             </div>
-            <div className="bg-gray-100 dark:bg-slate-800 p-6 rounded-xl text-center">
-              <div className="flex justify-center mb-3">
-                <CheckCircle className="h-8 w-8 text-blue-600" />
+            <div className="bg-gray-100 dark:bg-slate-800 p-6 rounded-xl text-left">
+              <div className="flex items-center mb-3">
+                <Building2 className="h-6 w-6 text-blue-600 mr-2" />
+                <h3 className="text-lg font-semibold">Bank Mortgage Release</h3>
               </div>
-              <div className="text-3xl font-bold">98%</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Happy Customers</div>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                We coordinate with UAE banks to clear any outstanding loans and issue release letters fast.
+              </p>
             </div>
-            <div className="bg-gray-100 dark:bg-slate-800 p-6 rounded-xl text-center">
-              <div className="flex justify-center mb-3">
-                <Clock className="h-8 w-8 text-blue-600" />
+            <div className="bg-gray-100 dark:bg-slate-800 p-6 rounded-xl text-left">
+              <div className="flex items-center mb-3">
+                <Wallet className="h-6 w-6 text-blue-600 mr-2" />
+                <h3 className="text-lg font-semibold">Fines & Salik Settlement</h3>
               </div>
-              <div className="text-3xl font-bold">24/7</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Support</div>
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-800 p-6 rounded-xl text-center">
-              <div className="flex justify-center mb-3">
-                <svg className="h-8 w-8 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                </svg>
-              </div>
-              <div className="text-3xl font-bold">15+</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Years Experience</div>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Support with clearing traffic fines and Salik balance to enable a clean, quick sale.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* About Section */}
+      {/* Free Home Pickup Across UAE */}
       <section className="py-16 bg-gray-100 dark:bg-slate-800">
         <div className="container mx-auto px-4">
-          <div className="grid gap-8 md:grid-cols-2 md:items-center">
-            <div>
-              <h2 className="text-3xl font-bold">
-                Trusted Car Buying
-                <span className="block text-blue-600 dark:text-blue-400 mt-2">15+ Years Experience</span>
-              </h2>
-              <p className="mt-6 text-gray-600 dark:text-gray-300">
-                With over 15 years in the automotive industry, we provide
-                professional car buying services across the nation. Our
-                experienced team ensures you get the best value for your
-                vehicle through expert evaluation and transparent pricing.
-              </p>
-              <ul className="mt-6 space-y-3">
-                <li className="flex items-center gap-3">
-                  <div className="flex items-center justify-center w-6 h-6 rounded-full bg-amber-500 text-white">
-                    <CheckCircle className="h-4 w-4" />
-                  </div>
-                  <span>Professional Vehicle Inspection</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <div className="flex items-center justify-center w-6 h-6 rounded-full bg-amber-500 text-white">
-                    <CheckCircle className="h-4 w-4" />
-                  </div>
-                  <span>Fair Market Value Assessment</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <div className="flex items-center justify-center w-6 h-6 rounded-full bg-amber-500 text-white">
-                    <CheckCircle className="h-4 w-4" />
-                  </div>
-                  <span>Instant Cash Payment Options</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <div className="flex items-center justify-center w-6 h-6 rounded-full bg-amber-500 text-white">
-                    <CheckCircle className="h-4 w-4" />
-                  </div>
-                  <span>Free Nationwide Pickup Service</span>
-                </li>
-              </ul>
-              <div className="mt-8">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center rounded-md bg-blue-600 text-white px-6 py-3 font-semibold hover:bg-blue-700 transition-all duration-200"
-                >
-                  Get Your Quote Today
-                </Link>
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold">Free Home Pickup Across UAE</h2>
+            <p className="mt-4 text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+              We come to you—home or office. Flexible slots and dedicated coordinators to make selling easy.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-sm">
+              <div className="flex items-center mb-3">
+                <MapPin className="h-6 w-6 text-amber-500 mr-2" />
+                <h3 className="text-lg font-semibold">Dubai</h3>
               </div>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Same-day pickup in most areas, 9am–9pm.</p>
             </div>
-            <div className="grid grid-cols-1 gap-4">
-              <div className="relative aspect-video w-full overflow-hidden rounded-xl border">
-                <div className="absolute top-2 right-2 bg-amber-500 text-white text-xs px-2 py-1 rounded-md z-10">
-                  Expert Team
-                </div>
-                <Image 
-                  src="/inspection-1.svg" 
-                  alt="Car Inspection" 
-                  fill 
-                  className="object-cover" 
-                />
+            <div className="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-sm">
+              <div className="flex items-center mb-3">
+                <MapPin className="h-6 w-6 text-amber-500 mr-2" />
+                <h3 className="text-lg font-semibold">Abu Dhabi</h3>
               </div>
-              <div className="relative aspect-video w-full overflow-hidden rounded-xl border">
-                <div className="absolute top-2 right-2 bg-amber-500 text-white text-xs px-2 py-1 rounded-md z-10">
-                  Expert Team
-                </div>
-                <Image 
-                  src="/inspection-2.svg" 
-                  alt="Car Inspection" 
-                  fill 
-                  className="object-cover" 
-                />
-              </div>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Next-day pickup, extended evening windows.</p>
             </div>
+            <div className="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-sm">
+              <div className="flex items-center mb-3">
+                <MapPin className="h-6 w-6 text-amber-500 mr-2" />
+                <h3 className="text-lg font-semibold">Sharjah</h3>
+              </div>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Flexible scheduling with WhatsApp confirmations.</p>
+            </div>
+          </div>
+          <div className="mt-8 text-center">
+            <Link href="/contact" className="inline-flex items-center justify-center rounded-md bg-amber-500 text-white px-6 py-3 font-semibold hover:bg-amber-600 transition-all duration-200">
+              Schedule Free Pickup
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Process Section */}
-      <section className="py-16 bg-black text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-2">Get Your Offer in 30 Minutes</h2>
-          <p className="max-w-2xl mx-auto mb-12">
-            Our simple 3-step process ensures you get the best value for your car
-            quickly and efficiently
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-blue-800 p-8 rounded-xl relative">
-              <div className="absolute -top-4 -right-4 w-8 h-8 rounded-full bg-amber-500 flex items-center justify-center font-bold">1</div>
-              <div className="bg-amber-500 w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <svg className="h-8 w-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="12" cy="7" r="4"></circle>
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Get Free No-Obligation Valuation</h3>
-              <p className="text-blue-100 text-sm">
-                Fill out our comprehensive form and receive a professional valuation from our
-                expert team within 24 hours
-              </p>
-            </div>
-            
-            <div className="bg-blue-800 p-8 rounded-xl relative">
-              <div className="absolute -top-4 -right-4 w-8 h-8 rounded-full bg-amber-500 flex items-center justify-center font-bold">2</div>
-              <div className="hidden md:block absolute top-1/2 -left-4 transform -translate-y-1/2">
-                <ArrowRight className="h-8 w-8 text-amber-500" />
-              </div>
-              <div className="bg-amber-500 w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <svg className="h-8 w-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                  <line x1="16" y1="2" x2="16" y2="6"></line>
-                  <line x1="8" y1="2" x2="8" y2="6"></line>
-                  <line x1="3" y1="10" x2="21" y2="10"></line>
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Book Free Car Inspection</h3>
-              <p className="text-blue-100 text-sm">
-                Schedule a convenient time for our certified professionals to inspect your
-                vehicle at your location
-              </p>
-            </div>
-            
-            <div className="bg-blue-800 p-8 rounded-xl relative">
-              <div className="absolute -top-4 -right-4 w-8 h-8 rounded-full bg-amber-500 flex items-center justify-center font-bold">3</div>
-              <div className="hidden md:block absolute top-1/2 -left-4 transform -translate-y-1/2">
-                <ArrowRight className="h-8 w-8 text-amber-500" />
-              </div>
-              <div className="bg-amber-500 w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <DollarSign className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Complete Sale & Get Paid</h3>
-              <p className="text-blue-100 text-sm">
-                If you're happy with our offer, complete the sale and receive instant payment via
-                your preferred method
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Brands Section */}
+      {/* We Buy Any Motor Types */}
       <section className="py-16 bg-white dark:bg-slate-900">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-2">Popular Car Brands We Buy</h2>
-          <p className="max-w-2xl mx-auto mb-12">
-            We purchase vehicles from all major automotive manufacturers at competitive prices
+          <h2 className="text-3xl font-bold mb-2">We Buy Any Motor</h2>
+          <p className="max-w-2xl mx-auto mb-12 text-gray-600 dark:text-gray-400">
+            Cars, SUVs, motorcycles, vans, and commercial vehicles—GCC specs welcome. Any condition.
           </p>
-
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
-            {['BMW', 'Mercedes', 'Toyota', 'Audi', 'Honda', 'Ford', 'Nissan', 'Hyundai', 'Lexus', 'Porsche', 'Tesla', 'Land Rover'].map((brand, index) => (
-              <div key={index} className="bg-gray-100 dark:bg-slate-800 p-6 rounded-xl flex flex-col items-center justify-center">
-                <div className="bg-white dark:bg-slate-700 w-16 h-16 rounded-full flex items-center justify-center mb-2">
-                  <Image 
-                    src={`/brand-${index + 1}.svg`} 
-                    alt={brand} 
-                    width={40} 
-                    height={40} 
-                  />
-                </div>
-                <div className="text-sm font-medium">{brand}</div>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+            <div className="bg-gray-100 dark:bg-slate-800 p-6 rounded-xl">
+              <div className="flex items-center justify-center mb-2">
+                <Car className="h-8 w-8 text-blue-600" />
               </div>
-            ))}
-          </div>
-
-          <div className="mt-8">
-            <Link
-              href="/brands"
-              className="inline-flex items-center justify-center rounded-md border border-gray-300 dark:border-gray-700 px-6 py-3 hover:bg-gray-100 dark:hover:bg-slate-800 transition-all duration-200"
-            >
-              See All Brands We Buy
-            </Link>
+              <div className="text-sm font-medium">Sedan & Hatchback</div>
+            </div>
+            <div className="bg-gray-100 dark:bg-slate-800 p-6 rounded-xl">
+              <div className="flex items-center justify-center mb-2">
+                <Truck className="h-8 w-8 text-blue-600" />
+              </div>
+              <div className="text-sm font-medium">SUV & 4x4</div>
+            </div>
+            <div className="bg-gray-100 dark:bg-slate-800 p-6 rounded-xl">
+              <div className="flex items-center justify-center mb-2">
+                <Bike className="h-8 w-8 text-blue-600" />
+              </div>
+              <div className="text-sm font-medium">Motorcycle</div>
+            </div>
+            <div className="bg-gray-100 dark:bg-slate-800 p-6 rounded-xl">
+              <div className="flex items-center justify-center mb-2">
+                <Truck className="h-8 w-8 text-blue-600" />
+              </div>
+              <div className="text-sm font-medium">Vans</div>
+            </div>
+            <div className="bg-gray-100 dark:bg-slate-800 p-6 rounded-xl">
+              <div className="flex items-center justify-center mb-2">
+                <Building2 className="h-8 w-8 text-blue-600" />
+              </div>
+              <div className="text-sm font-medium">Commercial</div>
+            </div>
           </div>
         </div>
       </section>
